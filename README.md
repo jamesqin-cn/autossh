@@ -69,14 +69,14 @@ docker rm $container_name
 docker run --restart=always \
     -v ${CURR_DIR}/id_rsa:/id_rsa \
     -e SSH_MODE=R \
-    -e SSH_USER=xdwdev \
-    -e SSH_HOST=47.96.72.164 \
-    -e SSH_PORT=65530 \
-    -e LOCAL_HOST=192.169.1.182 \
+    -e SSH_USER=u001 \
+    -e SSH_HOST=172.16.0.1 \
+    -e SSH_PORT=22 \
+    -e LOCAL_HOST=192.168.0.101 \
     -e LOCAL_PORT=22 \
     -e REMOTE_HOST=0.0.0.0 \
-    -e REMOTE_PORT=18088 \
-    -e TOTP_SECRET_KEY=2YMHDMZKDSKZ62Z6NYWI7L2ORY \
+    -e REMOTE_PORT=60022 \
+    -e TOTP_SECRET_KEY=3YMHEMZKDSKZ62Z6NYWI7L2ORY \
     --name $container_name \
     cnjamesqin/autossh
 ```
