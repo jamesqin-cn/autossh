@@ -7,7 +7,7 @@ REMOTE_HOST=${REMOTE_HOST:-0.0.0.0}
 SSH_PORT=${SSH_PORT:-22}
 SSH_KEY_FILE=${SSH_KEY_FILE:=/id_rsa}
 
-SSH_OPTION=' -o "StrictHostKeyChecking=no" -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" '
+SSH_OPTION=' -o StrictHostKeyChecking=no -o ServerAliveInterval=5 -o ServerAliveCountMax=3 '
 SSH_MODE=${SSH_MODE:-R}
 
 if [ -f "${SSH_KEY_FILE}" ]; then
